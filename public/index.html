@@ -82,5 +82,35 @@
         </div>
       </div>
       <script src="script.js"></script>
+
+    <!-- Event Creation -->
+    <div class="container" id="eventSection" style="display:none;">
+      <h2>Create Event</h2>
+      <form id="eventForm">
+        <div class="input-group">
+          <input type="text" id="eventTitle" placeholder="Event Title" required>
+          <label for="eventTitle">Event Title</label>
+        </div>
+        <div class="input-group">
+          <textarea id="eventDesc" placeholder="Event Description" required></textarea>
+          <label for="eventDesc">Event Description</label>
+        </div>
+        <div class="input-group">
+          <input type="datetime-local" id="slot1" required>
+          <label for="slot1">Time Slot 1</label>
+        </div>
+        <div class="input-group">
+          <input type="datetime-local" id="slot2">
+          <label for="slot2">Time Slot 2 (optional)</label>
+        </div>
+        <div class="input-group">
+          <input type="datetime-local" id="slot3">
+          <label for="slot3">Time Slot 3 (optional)</label>
+        </div>
+        <button class="btn" type="submit" id="createEvent">Create Event</button>
+      </form>
+    </div>
+
+
 </body>
 </html>
