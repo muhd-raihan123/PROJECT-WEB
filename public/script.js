@@ -1,3 +1,8 @@
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+import { app } from './firebaseauth.js';
+
+const db = getFirestore(app);
+
 const signUpButton=document.getElementById('signUpButton');
 const signInButton=document.getElementById('signInButton');
 const signInForm=document.getElementById('signIn');
