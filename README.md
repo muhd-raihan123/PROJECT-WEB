@@ -11,3 +11,5 @@ Tambah file style.css - 5/7/2025
 6/7/2025 11:55 pm: tambah firebaseauth.js( tempat cdn dia, dulu dlm index pindah sini)/ tambah script.js / tambah basic sign in email( kalau nk tukar kene tukar dlm database dlm firebase console )
 
 8/7/2025 - Buat **event creation** dalam index.html, with script logic dalam javascript(Desmond)
+
+10/7/25 - experimenting with chart.js- alham (
