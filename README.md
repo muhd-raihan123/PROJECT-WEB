@@ -15,3 +15,4 @@ Tambah file style.css - 5/7/2025
 10/7/25 - experimenting with chart.js- alham (
 
 11/7/25 - delete public directory cuz DB cant read it from there. event creation code migrate to homepage. each page ade js file sendiri jd x confuse and failsafe. kalu boleh buat html page baru for event & chart. dr homepage link gune button or smth - Alham
+reminder style.css tu linked to homepage dgn index. kalau buat page baru gune fail css baru ah senang skit nk manage
