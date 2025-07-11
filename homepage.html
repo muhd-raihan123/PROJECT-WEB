@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        body{
+            padding:30px;
+            background:linear-gradient(to right, #e2e2e2, #c9d6ff);
+        }
+        h1{
+            text-align:center;
+
+        }
+        button{
+            color:blueviolet;
+            background-color:#c9d6ff;
+            padding:5px;
+            border-radius:5px;
+            font-size:1rem;
+            font-weight:bold;
+            border:none;
+        }
+        button:hover{
+            text-decoration: underline;
+            color:blue;
+        }
+        button, div{
+            margin-left:15%;
+            font-size:20px;
+            padding:10px;
+        }
+        div{
+            font-weight:400;
+            color:rgb(12,11,11);
+
+        }
+        span{
+            font-weight:600;
+            font-size:22px;
+            color:black;
+        }
+    </style>
+    <script type="module" src="./homepage.js"></script>
+</head>
+<body>
+    <h1>Welcome to the Homepage</h1>
+    <div>First Name: <span id="loggedUserFName"></span></div>
+    <div>Last Name: <span id="loggedUserLName"></span></div>
+    <div>Email: <span id="loggedUserEmail"></span></div>
+    <button id="logout">Logout</button>
+<!-- Event Creation Section -->
+    <h2>Event Management</h2>
+    <button id="createEventBtn">Create Event</button>
+    <button id="viewEventsBtn">View Events</button>
+    <div class="container" id="eventSection" style="display:none;">
+      <h2>Create Event</h2>
+      <form id="eventForm">
+        <div class="input-group">
+          <input type="text" id="eventTitle" placeholder="Event Title" required>
+          <label for="eventTitle">Event Title</label>
+        </div>
+        <div class="input-group">
+          <textarea id="eventDesc" placeholder="Event Description" required></textarea>
+          <label for="eventDesc">Event Description</label>
+        </div>
+        <div class="input-group">
+          <input type="datetime-local" id="slot1" required>
+          <label for="slot1">Time Slot 1</label>
+        </div>
+        <div class="input-group">
+          <input type="datetime-local" id="slot2">
+          <label for="slot2">Time Slot 2 (optional)</label>
+        </div>
+        <div class="input-group">
+          <input type="datetime-local" id="slot3">
+          <label for="slot3">Time Slot 3 (optional)</label>
+        </div>
+        <button class="btn" type="submit" id="createEvent">Create Event</button>
+      </form>
+    </div>
+
+    <!--chart test-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+const xValues = [50,60,70,80,90,100,110,120,130,140,150];
+const yValues = [7,8,8,9,9,9,10,11,14,14,15];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: 6, max:16}}],
+    }
+  }
+});
+</script>
+</body>
+</html>
